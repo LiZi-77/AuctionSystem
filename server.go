@@ -15,16 +15,15 @@ import (
 )
 
 type Server struct {
-	gRPC.UnimplementedTemplateServer        // You need this line if you have a server
+	gRPC.UnimplementedAuctionServer        // You need this line if you have a server
 	name                             string // Not required but useful if you want to name your server
 	port                             string // Not required but useful if your server needs to know what port it's listening to
 	isPrimary       				 bool	// Ture if this server is Primary
-
 }
 
 // flags are used to get arguments from the terminal. Flags take a value, a default value and a description of the flag.
 // to use a flag then just add it as an argument when running the program.
-var serverName = flag.String("name", "default", "Server name") // set with "-name <name>" in terminal
+var serverName = flag.String("name", "PrimaryReplica", "Server name") // set with "-name <name>" in terminal
 var port = flag.String("port", "5400", "Server port")           // set with "-port <port>" in terminal
 var isPrimary = flag.Bool("isPrimary", false, "Is Server(Replica) Primary")  
 
@@ -65,7 +64,7 @@ func launchServer() {
 		isPrimary:      *isPrimary,
 	}
 
-	gRPC.RegisterTemplateServer(grpcServer, server) //Registers the server to the gRPC server.
+	gRPC.RegisterAuctionServer(grpcServer, server) //Registers the server to the gRPC server.
 
 	log.Printf("Server %s: Listening at %v\n", *serverName, list.Addr())
 
