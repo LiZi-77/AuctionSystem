@@ -114,10 +114,6 @@ func (s *server) Result(context context.Context, empty *gRPC.Empty) (*gRPC.Outco
 
 // sets the logger to use a log.txt file instead of the console
 func setLog() *os.File {
-	// Clears the log.txt file when a new server is started
-	if err := os.Truncate("log.txt", 0); err != nil {
-		log.Printf("Failed to truncate: %v", err)
-	}
 
 	// This connects to the log file/changes the output of the log informaiton to the log.txt file.
 	f, err := os.OpenFile("log.txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
