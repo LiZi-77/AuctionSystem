@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option go_package = "https://github.com/LiZi-77/AuctionSystem/proto";
+
+package proto;
+
+// compile command:
+// protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative proto/auctionSystem.proto
+
+service Auction {
+    rpc Bid(BidRequest) returns (Ack);
+    rpc Result(Empty) returns (Outcome) {};
+}
+
+message BidRequest {
+    int32 amount = 1;
+    int64 lamport = 2;
+}
+
+message Outcome {
+    bool bidState = 1;
+    int32 highestPrice = 2;
+}
+
+message Ack {
+    Acks ack = 1;
+}
+
+message Empty {}
+
+enum Acks {
+    ACK_FAIL = 0;
+    ACK_SUCCESS = 1;
+    ACK_EXCEPTION = 2;
+}
