@@ -514,3 +514,37 @@
 2022/11/29 16:22:57 Current bid status is on going with the highest price 31935
 2022/11/29 16:22:57 Client 0 bid amount 63996
 2022/11/29 16:22:57 Client 0 bid amount 63996
+2022/11/29 16:46:11 Server secondServer: Attempts to create listener on port 5002
+2022/11/29 16:46:11 Server secondServer: Listening at 127.0.0.1:5002
+2022/11/29 16:46:24 Server fServer: Attempts to create listener on port 5001
+2022/11/29 16:46:24 Server fServer: Listening at 127.0.0.1:5001
+2022/11/29 16:46:38 Server cServer: Attempts to create listener on port 5003
+2022/11/29 16:46:38 Server cServer: Listening at 127.0.0.1:5003
+2022/11/29 16:47:26 Current bid status is on going with the highest price 0
+2022/11/29 16:47:26 Client 0 bid amount 24
+2022/11/29 16:47:26 Client 0 bid amount 24
+2022/11/29 16:47:27 Current bid status is on going with the highest price 24
+2022/11/29 16:47:27 Client 0 bid amount 84
+2022/11/29 16:47:27 Client 0 bid amount 84
+2022/11/29 16:47:28 Current bid status is on going with the highest price 84
+2022/11/29 16:47:28 Client 0 bid amount 157
+2022/11/29 16:47:28 Client 0 bid amount 157
+2022/11/29 16:47:29 Current bid status is on going with the highest price 157
+2022/11/29 16:47:29 Client 0 bid amount 245
+2022/11/29 16:47:29 Client 0 bid amount 245
+2022/11/29 16:47:31 Current bid status is on going with the highest price 245
+2022/11/29 16:47:31 Client 0 bid amount 372
+2022/11/29 16:47:31 This bid round is over(bid times more than 5)
+2022/11/29 16:47:31 Starting a new bidding round, starting amount 0
+2022/11/29 16:47:31 Client 0 bid amount 372
+2022/11/29 16:47:31 This bid round is over(bid times more than 5)
+2022/11/29 16:47:31 Starting a new bidding round, starting amount 0
+2022/11/29 16:47:33 Current bid status is on going with the highest price 0
+2022/11/29 16:47:33 Client 0 bid amount 177
+2022/11/29 16:47:33 Client 0 bid amount 177
+2022/11/29 16:47:35 Current bid status is on going with the highest price 177
+2022/11/29 16:47:35 Client 0 bid amount 399
+2022/11/29 16:47:35 Client 0 bid amount 399
+2022/11/29 16:47:36 Current bid status is on going with the highest price 399
+2022/11/29 16:47:36 Client 0 bid amount 660
+2022/11/29 16:47:36 Client 0 bid amount 660
