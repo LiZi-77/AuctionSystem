@@ -13,12 +13,13 @@ service Auction {
 }
 
 message BidRequest {
-    int32 amount = 1;
-    int64 lamport = 2;
+    int32 clientId = 1;
+    int32 amount = 2;
+    int64 lamport = 3;
 }
 
 message Outcome {
-    bool bidState = 1;
+    string bidState = 1;
     int32 highestPrice = 2;
 }
 

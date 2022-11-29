@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"fmt"
 	"log"
@@ -14,18 +15,19 @@ import (
 	"google.golang.org/grpc"
 )
 
-type Server struct {
+type server struct {
 	gRPC.UnimplementedAuctionServer        // You need this line if you have a server
 	name                             string // Not required but useful if you want to name your server
 	port                             string // Not required but useful if your server needs to know what port it's listening to
-	isPrimary       				 bool	// Ture if this server is Primary
+	highestPrice	 				 int32
+	status 							 string // the status of current bid
+	bidTimes						 int32	// total bid times, max 5
 }
 
 // flags are used to get arguments from the terminal. Flags take a value, a default value and a description of the flag.
 // to use a flag then just add it as an argument when running the program.
 var serverName = flag.String("name", "PrimaryReplica", "Server name") // set with "-name <name>" in terminal
-var port = flag.String("port", "5400", "Server port")           // set with "-port <port>" in terminal
-var isPrimary = flag.Bool("isPrimary", false, "Is Server(Replica) Primary")  
+var port = flag.String("port", "5001", "Server port")           // set with "-port <port>" in terminal default 5001
 
 func main() {
 
@@ -58,10 +60,12 @@ func launchServer() {
 	grpcServer := grpc.NewServer(opts...)
 
 	// makes a new server instance using the name and port from the flags.
-	server := &Server{
+	server := &server{
 		name:           *serverName,
 		port:           *port,
-		isPrimary:      *isPrimary,
+		highestPrice:   0,
+		status:			"on going",
+		bidTimes:       0,
 	}
 
 	gRPC.RegisterAuctionServer(grpcServer, server) //Registers the server to the gRPC server.
@@ -71,46 +75,42 @@ func launchServer() {
 	if err := grpcServer.Serve(list); err != nil {
 		log.Fatalf("failed to serve %v", err)
 	}
-	// code here is unreachable because grpcServer.Serve occupies the current thread.
 }
 
-// // The method format can be found in the pb.go file. If the format is wrong, the server type will give an error.
-// func (s *Server) Increment(ctx context.Context, Amount *gRPC.Amount) (*gRPC.Ack, error) {
-// 	// locks the server ensuring no one else can increment the value at the same time.
-// 	// and unlocks the server when the method is done.
-// 	s.mutex.Lock()
-// 	defer s.mutex.Unlock()
+//func bid
+func (s *server) Bid(context context.Context, bid *gRPC.BidRequest) (*gRPC.Ack, error){
+	log.Printf("Client %v bid amount %d", bid.clientId, bid.amount)
 
-// 	// increments the value by the amount given in the request,
-// 	// and returns the new value.
-// 	s.incrementValue += int64(Amount.GetValue())
-// 	return &gRPC.Ack{NewValue: s.incrementValue}, nil
-// }
+    if int(bid.Amount) > s.highestPrice {
+        s.highestPrice = int(bid.Amount)
+        //change the bid status
+		s.bidTimes ++
+		if s.bidTimes >= 5 {
+			// when the total bid time > 5, this round is over
+			s.status = "over"
+			log.Printf("This bid round is over(bid times more than 5)")
+			println("This bid round is over(bid times more than 5)")
 
-// func (s *Server) SayHi(msgStream gRPC.Template_SayHiServer) error {
-// 	for {
-// 		// get the next message from the stream
-// 		msg, err := msgStream.Recv()
+			//start another round
+			s.highestPrice = 0
+			s.bidTimes = 0
+			s.status = "on going"
+			log.Printf("Starting a new bidding round, starting amount %d",s.highestPrice)
+		}
+        return &gRPC.Ack{Ack: gRPC.Acks_ACK_SUCCESS}, nil
+    } else if int(bid.Amount) < s.highestPrice{
+        return &gRPC.Ack{Ack: gRPC.Acks_ACK_FAIL}, nil
+    } else {
+        return &gRPC.Ack{Ack: gRPC.Acks_ACK_EXCEPTION}, nil
+    }
+}
 
-// 		// the stream is closed so we can exit the loop
-// 		if err == io.EOF {
-// 			break
-// 		}
-// 		// some other error
-// 		if err != nil {
-// 			return err
-// 		}
-// 		// log the message
-// 		log.Printf("Received message from %s: %s", msg.ClientName, msg.Message)
-// 	}
 
-// 	// be a nice server and say goodbye to the client :)
-// 	ack := &gRPC.Farewell{Message: "Goodbye"}
-// 	msgStream.SendAndClose(ack)
-
-// 	return nil
-// }
-
+func (s *server) Result(context context.Context, empty *gRPC.Empty) (*gRPC.Outcome, error) {
+	log.Printf("Current bid status is %s with the highest price %d",string(s.status),int32(s.highestPrice))
+	println("Current bid status is %s with the highest price %d",string(s.status),int32(s.highestPrice))
+	return &gRPC.Outcome{Amount: int32(s.highestPrice), Over: string(s.status)}, nil
+}
 
 // sets the logger to use a log.txt file instead of the console
 func setLog() *os.File {
