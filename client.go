@@ -1,127 +1,130 @@
 package main
 
 import (
-	"bufio"
 	"context"
+	"fmt"
 	"log"
+	"math/rand"
 	"os"
 	"strconv"
+	"time"
 
-	auction "github.com/LiZi-77/AuctionSystem/proto"
+	gRPC "github.com/LiZi-77/ActionSystem/proto"
+
 	"google.golang.org/grpc"
 )
 
-var server auction.AuctionClient //the server
-var ServerConn *grpc.ClientConn  //the server connection
+var (
+	id          int32
+	lamport     int64
+	serverCount int
+	currentBid  int
+	roundOver   bool
+	chanDone    []chan bool
+	servers     []gRPC.AuctionClient
+)
 
-func main() {
-	
-	//connect to the server
-	port := ":" + os.Args[1]
-	connection, err := grpc.Dial(port, grpc.WithInsecure())
+func CheckServer(err error, serverId int) bool {
 	if err != nil {
-		log.Fatalf("Unable to connect: %v", err)
+		log.Printf("Server %v unresponsive, connection disconnected...", serverId)
+		servers[serverId] = nil
+		chanDone[serverId] <- true
+		return false
 	}
+	return true
+}
 
-	//log to file instead of console
-	f := setLogClient()
-	defer f.Close()
-
-	server := auction.NewAuctionClient(connection) //creates a new client
-
-	defer connection.Close()
-
-	go func() {
-		scanner := bufio.NewScanner(os.Stdin)
-		println("Enter 'bid' to make a new bid, or 'result' to retrieve the highest bid/outcome.")
-
-		for {
-			scanner.Scan()
-			text := scanner.Text()
-
-			if text == "bid" {
-				println("Enter how much you would like to bid:")
-				scanner.Scan()
-				text := scanner.Text()
-				bidAmount, err := strconv.Atoi(text)
-				if err != nil {
-					log.Fatal("We needed a int")
+func BroadcastBid(amount int32) {
+	lamport++
+	timeout, _ := context.WithTimeout(context.Background(), time.Second*5)
+	currBid := gRPC.BidRequest{ClientId: id, Amount: amount, Lamport: lamport}
+	log.Printf("Bidding amount %d", amount)
+	for i, s := range servers {
+		if s != nil {
+			ack, err := s.Bid(timeout, &currBid)
+			if CheckServer(err, i) {
+				switch ack.Ack {
+				case gRPC.Acks_ACK_FAIL:
+					log.Printf("Bidding server %v failed!", i)
+				case gRPC.Acks_ACK_SUCCESS:
+					log.Printf("Bidding server %v sucess!", i)
+				case gRPC.Acks_ACK_EXCEPTION:
+					log.Printf("Bidding server %v exception", i)
 				}
-
-				bid := &auction.BidRequest{
-					amount:          int32(bidAmount),
-				}
-
-				ack := RecBid(bid, connection, server, port)
-
-				log.Printf("Client %s: Bid response: ", port, ack.GetAcknowledgement())
-				println("Bid response: ", ack.GetAcknowledgement())
-			} else if text == "result" {
-
-				getResult := &auction.GetResult{}
-
-				result := RecResult(getResult, connection, server, port)
-				
-
-				outcomeString := strconv.FormatInt(int64(result.Outcome), 10)
-				log.Printf("Client %s: "+result.Message+". The result of the auction is: "+outcomeString, port)
-				println(result.Message + ". The result of the auction is " + outcomeString + " and this bid was made by client" + result.HighestBidderId)
-			} else {
-				println("Sorry didn't catch that, try again ")
 			}
 		}
-	}()
+	}
 }
 
-func RecBid(setBid *auction.SetBid, connection *grpc.ClientConn, server auction.AuctionClient, port string) *auction.AckBid {
-	ack, err := server.Bid(context.Background(), setBid)
-
-	if err != nil {
-		log.Printf("Client %s: Bid failed: ", port, err)
-		log.Printf("Client %s: FEServer has died", port)
-		connection, server = Redial(port)
-		ack = RecBid(setBid, connection, server, port)
-
+func GetResult() *gRPC.Outcome {
+	lamport++
+	timeout, _ := context.WithTimeout(context.Background(), time.Second*5)
+	for i := 0; i < serverCount; i++ {
+		if servers[i] != nil {
+			result, err := servers[i].Result(timeout, &gRPC.Empty{})
+			if !CheckServer(err, i) {
+				continue
+			}
+			return result
+		}
 	}
-	return ack
-
+	return nil
 }
 
-func RecResult(getResult *auction.GetResult, connection *grpc.ClientConn, server auction.AuctionClient, port string) *auction.ReturnResult {
-	result, err := server.Result(context.Background(), getResult)
-	if err != nil {
-		log.Printf("Client %s: Bid failed: ", port, err)
-		log.Printf("Client %s: FEServer has died", port)
-		connection, server = Redial(port)
-		result = RecResult(getResult, connection, server, port)
+func FrontEnd(servers int) {
+	for {
+		if serverCount == servers {
+			result := GetResult()
+
+			if result.BidState != "on going" {
+				if !roundOver {
+					roundOver = true
+					currentBid = 0
+					log.Printf("Round over, total bidding amount: %v", result.HighestPrice)
+					return
+				}
+				time.Sleep(time.Second * time.Duration(rand.Intn(2)+1))
+				continue
+			}
+
+			roundOver = false
+			currentBid += rand.Intn(500) + 1
+			BroadcastBid(int32(currentBid) + result.HighestPrice)
+			time.Sleep(time.Second * time.Duration(rand.Intn(2)+1))
+		}
 	}
-	return result
 }
 
-func Redial(port string) (*grpc.ClientConn, auction.AuctionClient) {
-	log.Printf("Client: FEServer on port %s is not listening anymore. It has died", port)
-	if port == ":4001" {
-		port = ":4002"
-	} else {
-		port = ":4001"
-	}
-	log.Printf("Client: Redialing to new port: " + port)
-	connection, err := grpc.Dial(port, grpc.WithInsecure())
+func DialServer(serverId int) {
+	conn, err := grpc.Dial(fmt.Sprintf("localhost:%d", serverId+5000), grpc.WithInsecure())
 	if err != nil {
-		log.Fatalf("Unable to connect: %v", err)
+		log.Fatalf("Failed to connect: %v", err)
 	}
 
-	server = auction.NewAuctionClient(connection) //creates a new client
-	log.Printf("Client: Client has connected to new FEServer on port %s", port)
-	return connection, server
+	servers[serverId] = gRPC.NewAuctionClient(conn)
+	chanDone[serverId] = make(chan bool)
+	log.Printf("Client connected to server...")
+	serverCount++
+
+	<-chanDone[serverId]
+	conn.Close()
 }
+func main() {
+	rand.Seed(time.Now().UnixNano())
+	args := os.Args[1:]
+	aid, _ := strconv.ParseInt(args[0], 10, 32)
+	sc, _ := strconv.ParseInt(args[1], 10, 32)
+	br, _ := strconv.ParseInt(args[2], 10, 32)
+	id = int32(aid)
+	chanDone = make([]chan bool, int(sc))
+	servers = make([]gRPC.AuctionClient, int(sc))
 
-// sets the logger to use a log.txt file instead of the console
-func setLogClient() *os.File {
-	f, err := os.OpenFile("log.txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
-	if err != nil {
-		log.Fatalf("error opening file: %v", err)
+	for i := 0; i < int(sc); i++ {
+		go DialServer(i)
 	}
-	log.SetOutput(f)
-	return f
+
+	for i := 0; i < int(br); i++ {
+		log.Printf("Starting bidding round %d/%d", i+1, int(br))
+		FrontEnd(int(sc))
+	}
 }
