@@ -18,7 +18,6 @@ var (
 	id          int32
 	lamport     int64
 	currentBid  int
-
 	chanDone    []chan bool
 	servers     []gRPC.AuctionClient // all possible servers
 )
@@ -84,7 +83,7 @@ func FrontEndBid(clientId int, amount int) {
 
 func bidStart(clientId int) {
 	println("Bid already start now.")
-	
+
 	scanner := bufio.NewScanner(os.Stdin)
 	println("Welcome to the Auction System!\n 1.Result - to check current highest price \n 2. Bid - to give your amount")
 
@@ -150,7 +149,7 @@ func main() {
 	// go run client.go <clientNo.>
 	clientNo, _ := strconv.ParseInt(args[0], 10, 32)
 	//there are 2 severs at port 5001 and 5002
-	
+
 	id = int32(clientNo)
 	chanDone = make([]chan bool, 2)
 	servers = make([]gRPC.AuctionClient, 2)	// store all servers
@@ -158,7 +157,7 @@ func main() {
 	for i := 0; i < 2; i++ {
 		connServer(i, int(clientNo))
 	}
-	
+
 	//println(GetResult().HighestPrice)
 	bidStart(int(clientNo))
 }
