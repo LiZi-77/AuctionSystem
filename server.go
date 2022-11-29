@@ -20,7 +20,7 @@ type server struct {
 	name                             string // Not required but useful if you want to name your server
 	port                             string // Not required but useful if your server needs to know what port it's listening to
 	highestPrice	 				 int32
-	status 							 string // the status of current bid
+	status 							 bool // the status of current bid
 	bidTimes						 int32	// total bid times, max 5
 }
 
@@ -64,7 +64,7 @@ func launchServer() {
 		name:           *serverName,
 		port:           *port,
 		highestPrice:   0,
-		status:			"on going",
+		status:			true,
 		bidTimes:       0,
 	}
 
@@ -87,15 +87,16 @@ func (s *server) Bid(context context.Context, bid *gRPC.BidRequest) (*gRPC.Ack, 
 		s.bidTimes ++
 		if s.bidTimes >= 5 {
 			// when the total bid time > 5, this round is over
-			s.status = "over"
+			s.status = false
 			log.Printf("This bid round is over(bid times more than 5)")
 			println("This bid round is over(bid times more than 5)")
 
-			//start another round
-			s.highestPrice = 0
-			s.bidTimes = 0
-			s.status = "on going"
-			log.Printf("Starting a new bidding round, starting amount %d",s.highestPrice)
+			// //start another round
+			// s.highestPrice = 0
+			// s.bidTimes = 0
+			// s.status = true
+			// log.Printf("Starting a new bidding round, starting amount %d",s.highestPrice)
+			return &gRPC.Ack{Ack: gRPC.Acks_ACK_FAIL}, nil
 		}
         return &gRPC.Ack{Ack: gRPC.Acks_ACK_SUCCESS}, nil
     } else if int(bid.Amount) < int(s.highestPrice) {
@@ -107,9 +108,9 @@ func (s *server) Bid(context context.Context, bid *gRPC.BidRequest) (*gRPC.Ack, 
 
 
 func (s *server) Result(context context.Context, empty *gRPC.Empty) (*gRPC.Outcome, error) {
-	log.Printf("Current bid status is %s with the highest price %d",string(s.status),int32(s.highestPrice))
-	println("Current bid status is %s with the highest price %d",string(s.status),int32(s.highestPrice))
-	return &gRPC.Outcome{BidState: string(s.status), HighestPrice: int32(s.highestPrice)}, nil
+	log.Printf("Current bid status is %t with the highest price %d",bool(s.status),int32(s.highestPrice))
+	println("Current bid status is", bool(s.status) ,"with the highest price ",int32(s.highestPrice)," current round is ", s.bidTimes)
+	return &gRPC.Outcome{BidState: bool(s.status), HighestPrice: int32(s.highestPrice)}, nil
 }
 
 // sets the logger to use a log.txt file instead of the console

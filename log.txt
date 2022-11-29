@@ -1,2 +1,29 @@
-2022/11/29 12:09:38 Server PrimaryReplica: Attempts to create listener on port 5001
-2022/11/29 12:09:38 Server PrimaryReplica: Listening at 127.0.0.1:5001
+2022/11/30 04:02:22 Server server_1: Attempts to create listener on port 5001
+2022/11/30 04:02:22 Server server_1: Listening at 127.0.0.1:5001
+2022/11/30 04:02:24 Server server_2: Attempts to create listener on port 5002
+2022/11/30 04:02:24 Server server_2: Listening at 127.0.0.1:5002
+2022/11/30 04:02:27 Client 1 connected to server 0
+2022/11/30 04:02:27 Client 1 connected to server 1
+2022/11/30 04:02:31 Client 2 connected to server 0
+2022/11/30 04:02:31 Client 2 connected to server 1
+2022/11/30 04:02:36 client 2 send the Result Request
+2022/11/30 04:02:36 Current bid status is true with the highest price 0
+2022/11/30 04:02:40 client 2 send the Bid Request
+2022/11/30 04:02:40 Client 2 bid amount 5
+2022/11/30 04:02:40 Client %!s(int=2) bid 5 on server 0 failed!
+2022/11/30 04:02:40 Client 2 bid amount 5
+2022/11/30 04:02:40 Client %!s(int=2) bid 5 on server 1 failed!
+2022/11/30 04:02:43 client 1 send the Result Request
+2022/11/30 04:02:43 Current bid status is true with the highest price 5
+2022/11/30 04:02:45 client 1 send the Bid Request
+2022/11/30 04:02:45 Client 1 bid amount 50
+2022/11/30 04:02:45 Client %!s(int=1) bid 50 on server 0 failed!
+2022/11/30 04:02:45 Client 1 bid amount 50
+2022/11/30 04:02:45 Client %!s(int=1) bid 50 on server 1 failed!
+2022/11/30 04:02:50 client 2 send the Result Request
+2022/11/30 04:02:50 Current bid status is true with the highest price 50
+2022/11/30 04:02:54 client 2 send the Bid Request
+2022/11/30 04:02:54 Client 2 bid amount 55
+2022/11/30 04:02:54 Client %!s(int=2) bid 55 on server 0 failed!
+2022/11/30 04:02:54 Client 2 bid amount 55
+2022/11/30 04:02:54 Client %!s(int=2) bid 55 on server 1 failed!

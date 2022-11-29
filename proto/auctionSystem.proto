@@ -19,7 +19,7 @@ message BidRequest {
 }
 
 message Outcome {
-    string bidState = 1;
+    bool bidState = 1;
     int32 highestPrice = 2;
 }
 
