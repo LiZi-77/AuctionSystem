@@ -95,6 +95,7 @@ func FrontEnd(servers int) {
 	}
 }
 
+// DialServer: Dial server and connect to it
 func DialServer(serverId int) {
 	conn, err := grpc.Dial(fmt.Sprintf("localhost:%d", serverId+5000), grpc.WithInsecure())
 	if err != nil {

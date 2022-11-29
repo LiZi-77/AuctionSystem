@@ -74,3 +74,443 @@
 2022/11/29 16:19:56 Current bid status is on going with the highest price 0
 2022/11/29 16:19:56 Client 0 bid amount 4163
 2022/11/29 16:19:56 Client 0 bid amount 4163
+2022/11/29 16:19:58 Current bid status is on going with the highest price 4163
+2022/11/29 16:19:58 Client 0 bid amount 8391
+2022/11/29 16:19:58 Client 0 bid amount 8391
+2022/11/29 16:20:00 Current bid status is on going with the highest price 8391
+2022/11/29 16:20:00 Client 0 bid amount 12911
+2022/11/29 16:20:00 Client 0 bid amount 12911
+2022/11/29 16:20:01 Current bid status is on going with the highest price 12911
+2022/11/29 16:20:01 Client 0 bid amount 17811
+2022/11/29 16:20:01 Client 0 bid amount 17811
+2022/11/29 16:20:02 Current bid status is on going with the highest price 17811
+2022/11/29 16:20:02 Client 0 bid amount 23014
+2022/11/29 16:20:02 This bid round is over(bid times more than 5)
+2022/11/29 16:20:02 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:02 Client 0 bid amount 23014
+2022/11/29 16:20:02 This bid round is over(bid times more than 5)
+2022/11/29 16:20:02 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:04 Current bid status is on going with the highest price 0
+2022/11/29 16:20:04 Client 0 bid amount 5210
+2022/11/29 16:20:04 Client 0 bid amount 5210
+2022/11/29 16:20:05 Current bid status is on going with the highest price 5210
+2022/11/29 16:20:05 Client 0 bid amount 10561
+2022/11/29 16:20:05 Client 0 bid amount 10561
+2022/11/29 16:20:06 Current bid status is on going with the highest price 10561
+2022/11/29 16:20:06 Client 0 bid amount 15970
+2022/11/29 16:20:06 Client 0 bid amount 15970
+2022/11/29 16:20:08 Current bid status is on going with the highest price 15970
+2022/11/29 16:20:08 Client 0 bid amount 21492
+2022/11/29 16:20:08 Client 0 bid amount 21492
+2022/11/29 16:20:10 Current bid status is on going with the highest price 21492
+2022/11/29 16:20:10 Client 0 bid amount 27393
+2022/11/29 16:20:10 This bid round is over(bid times more than 5)
+2022/11/29 16:20:10 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:10 Client 0 bid amount 27393
+2022/11/29 16:20:10 This bid round is over(bid times more than 5)
+2022/11/29 16:20:10 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:12 Current bid status is on going with the highest price 0
+2022/11/29 16:20:12 Client 0 bid amount 6385
+2022/11/29 16:20:12 Client 0 bid amount 6385
+2022/11/29 16:20:14 Current bid status is on going with the highest price 6385
+2022/11/29 16:20:14 Client 0 bid amount 12992
+2022/11/29 16:20:14 Client 0 bid amount 12992
+2022/11/29 16:20:15 Current bid status is on going with the highest price 12992
+2022/11/29 16:20:15 Client 0 bid amount 19772
+2022/11/29 16:20:15 Client 0 bid amount 19772
+2022/11/29 16:20:16 Current bid status is on going with the highest price 19772
+2022/11/29 16:20:16 Client 0 bid amount 26902
+2022/11/29 16:20:16 Client 0 bid amount 26902
+2022/11/29 16:20:17 Current bid status is on going with the highest price 26902
+2022/11/29 16:20:17 Client 0 bid amount 34319
+2022/11/29 16:20:17 This bid round is over(bid times more than 5)
+2022/11/29 16:20:17 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:17 Client 0 bid amount 34319
+2022/11/29 16:20:17 This bid round is over(bid times more than 5)
+2022/11/29 16:20:17 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:19 Current bid status is on going with the highest price 0
+2022/11/29 16:20:19 Client 0 bid amount 7683
+2022/11/29 16:20:19 Client 0 bid amount 7683
+2022/11/29 16:20:21 Current bid status is on going with the highest price 7683
+2022/11/29 16:20:21 Client 0 bid amount 15837
+2022/11/29 16:20:21 Client 0 bid amount 15837
+2022/11/29 16:20:22 Current bid status is on going with the highest price 15837
+2022/11/29 16:20:22 Client 0 bid amount 24202
+2022/11/29 16:20:22 Client 0 bid amount 24202
+2022/11/29 16:20:23 Current bid status is on going with the highest price 24202
+2022/11/29 16:20:23 Client 0 bid amount 32743
+2022/11/29 16:20:23 Client 0 bid amount 32743
+2022/11/29 16:20:24 Current bid status is on going with the highest price 32743
+2022/11/29 16:20:24 Client 0 bid amount 41540
+2022/11/29 16:20:24 This bid round is over(bid times more than 5)
+2022/11/29 16:20:24 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:24 Client 0 bid amount 41540
+2022/11/29 16:20:24 This bid round is over(bid times more than 5)
+2022/11/29 16:20:24 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:26 Current bid status is on going with the highest price 0
+2022/11/29 16:20:26 Client 0 bid amount 9045
+2022/11/29 16:20:26 Client 0 bid amount 9045
+2022/11/29 16:20:28 Current bid status is on going with the highest price 9045
+2022/11/29 16:20:28 Client 0 bid amount 18231
+2022/11/29 16:20:28 Client 0 bid amount 18231
+2022/11/29 16:20:29 Current bid status is on going with the highest price 18231
+2022/11/29 16:20:29 Client 0 bid amount 27835
+2022/11/29 16:20:29 Client 0 bid amount 27835
+2022/11/29 16:20:31 Current bid status is on going with the highest price 27835
+2022/11/29 16:20:31 Client 0 bid amount 37759
+2022/11/29 16:20:31 Client 0 bid amount 37759
+2022/11/29 16:20:32 Current bid status is on going with the highest price 37759
+2022/11/29 16:20:32 Client 0 bid amount 47737
+2022/11/29 16:20:32 This bid round is over(bid times more than 5)
+2022/11/29 16:20:32 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:32 Client 0 bid amount 47737
+2022/11/29 16:20:32 This bid round is over(bid times more than 5)
+2022/11/29 16:20:32 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:34 Current bid status is on going with the highest price 0
+2022/11/29 16:20:34 Client 0 bid amount 10167
+2022/11/29 16:20:34 Client 0 bid amount 10167
+2022/11/29 16:20:36 Current bid status is on going with the highest price 10167
+2022/11/29 16:20:36 Client 0 bid amount 20433
+2022/11/29 16:20:36 Client 0 bid amount 20433
+2022/11/29 16:20:37 Current bid status is on going with the highest price 20433
+2022/11/29 16:20:37 Client 0 bid amount 30712
+2022/11/29 16:20:37 Client 0 bid amount 30712
+2022/11/29 16:20:39 Current bid status is on going with the highest price 30712
+2022/11/29 16:20:39 Client 0 bid amount 41360
+2022/11/29 16:20:39 Client 0 bid amount 41360
+2022/11/29 16:20:40 Current bid status is on going with the highest price 41360
+2022/11/29 16:20:40 Client 0 bid amount 52264
+2022/11/29 16:20:40 This bid round is over(bid times more than 5)
+2022/11/29 16:20:40 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:40 Client 0 bid amount 52264
+2022/11/29 16:20:40 This bid round is over(bid times more than 5)
+2022/11/29 16:20:40 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:42 Current bid status is on going with the highest price 0
+2022/11/29 16:20:42 Client 0 bid amount 11178
+2022/11/29 16:20:42 Client 0 bid amount 11178
+2022/11/29 16:20:43 Current bid status is on going with the highest price 11178
+2022/11/29 16:20:43 Client 0 bid amount 22373
+2022/11/29 16:20:43 Client 0 bid amount 22373
+2022/11/29 16:20:45 Current bid status is on going with the highest price 22373
+2022/11/29 16:20:45 Client 0 bid amount 33731
+2022/11/29 16:20:45 Client 0 bid amount 33731
+2022/11/29 16:20:47 Current bid status is on going with the highest price 33731
+2022/11/29 16:20:47 Client 0 bid amount 45242
+2022/11/29 16:20:47 Client 0 bid amount 45242
+2022/11/29 16:20:49 Current bid status is on going with the highest price 45242
+2022/11/29 16:20:49 Client 0 bid amount 57121
+2022/11/29 16:20:49 This bid round is over(bid times more than 5)
+2022/11/29 16:20:49 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:49 Client 0 bid amount 57121
+2022/11/29 16:20:49 This bid round is over(bid times more than 5)
+2022/11/29 16:20:49 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:51 Current bid status is on going with the highest price 0
+2022/11/29 16:20:51 Client 0 bid amount 12270
+2022/11/29 16:20:51 Client 0 bid amount 12270
+2022/11/29 16:20:52 Current bid status is on going with the highest price 12270
+2022/11/29 16:20:52 Client 0 bid amount 24735
+2022/11/29 16:20:52 Client 0 bid amount 24735
+2022/11/29 16:20:54 Current bid status is on going with the highest price 24735
+2022/11/29 16:20:54 Client 0 bid amount 37455
+2022/11/29 16:20:54 Client 0 bid amount 37455
+2022/11/29 16:20:56 Current bid status is on going with the highest price 37455
+2022/11/29 16:20:56 Client 0 bid amount 50579
+2022/11/29 16:20:56 Client 0 bid amount 50579
+2022/11/29 16:20:57 Current bid status is on going with the highest price 50579
+2022/11/29 16:20:57 Client 0 bid amount 63773
+2022/11/29 16:20:57 This bid round is over(bid times more than 5)
+2022/11/29 16:20:57 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:57 Client 0 bid amount 63773
+2022/11/29 16:20:57 This bid round is over(bid times more than 5)
+2022/11/29 16:20:57 Starting a new bidding round, starting amount 0
+2022/11/29 16:20:59 Current bid status is on going with the highest price 0
+2022/11/29 16:20:59 Client 0 bid amount 13518
+2022/11/29 16:20:59 Client 0 bid amount 13518
+2022/11/29 16:21:01 Current bid status is on going with the highest price 13518
+2022/11/29 16:21:01 Client 0 bid amount 27304
+2022/11/29 16:21:01 Client 0 bid amount 27304
+2022/11/29 16:21:02 Current bid status is on going with the highest price 27304
+2022/11/29 16:21:02 Client 0 bid amount 41532
+2022/11/29 16:21:02 Client 0 bid amount 41532
+2022/11/29 16:21:03 Current bid status is on going with the highest price 41532
+2022/11/29 16:21:03 Client 0 bid amount 55997
+2022/11/29 16:21:03 Client 0 bid amount 55997
+2022/11/29 16:21:04 Current bid status is on going with the highest price 55997
+2022/11/29 16:21:04 Client 0 bid amount 70753
+2022/11/29 16:21:04 This bid round is over(bid times more than 5)
+2022/11/29 16:21:04 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:04 Client 0 bid amount 70753
+2022/11/29 16:21:04 This bid round is over(bid times more than 5)
+2022/11/29 16:21:04 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:05 Current bid status is on going with the highest price 0
+2022/11/29 16:21:05 Client 0 bid amount 15065
+2022/11/29 16:21:05 Client 0 bid amount 15065
+2022/11/29 16:21:06 Current bid status is on going with the highest price 15065
+2022/11/29 16:21:06 Client 0 bid amount 30471
+2022/11/29 16:21:06 Client 0 bid amount 30471
+2022/11/29 16:21:08 Current bid status is on going with the highest price 30471
+2022/11/29 16:21:08 Client 0 bid amount 46165
+2022/11/29 16:21:08 Client 0 bid amount 46165
+2022/11/29 16:21:10 Current bid status is on going with the highest price 46165
+2022/11/29 16:21:10 Client 0 bid amount 62085
+2022/11/29 16:21:10 Client 0 bid amount 62085
+2022/11/29 16:21:12 Current bid status is on going with the highest price 62085
+2022/11/29 16:21:12 Client 0 bid amount 78187
+2022/11/29 16:21:12 This bid round is over(bid times more than 5)
+2022/11/29 16:21:12 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:12 Client 0 bid amount 78187
+2022/11/29 16:21:12 This bid round is over(bid times more than 5)
+2022/11/29 16:21:12 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:14 Current bid status is on going with the highest price 0
+2022/11/29 16:21:14 Client 0 bid amount 16136
+2022/11/29 16:21:14 Client 0 bid amount 16136
+2022/11/29 16:21:16 Current bid status is on going with the highest price 16136
+2022/11/29 16:21:16 Client 0 bid amount 32531
+2022/11/29 16:21:16 Client 0 bid amount 32531
+2022/11/29 16:21:18 Current bid status is on going with the highest price 32531
+2022/11/29 16:21:18 Client 0 bid amount 48942
+2022/11/29 16:21:18 Client 0 bid amount 48942
+2022/11/29 16:21:20 Current bid status is on going with the highest price 48942
+2022/11/29 16:21:20 Client 0 bid amount 65397
+2022/11/29 16:21:20 Client 0 bid amount 65397
+2022/11/29 16:21:22 Current bid status is on going with the highest price 65397
+2022/11/29 16:21:22 Client 0 bid amount 82196
+2022/11/29 16:21:22 This bid round is over(bid times more than 5)
+2022/11/29 16:21:22 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:22 Client 0 bid amount 82196
+2022/11/29 16:21:22 This bid round is over(bid times more than 5)
+2022/11/29 16:21:22 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:23 Current bid status is on going with the highest price 0
+2022/11/29 16:21:23 Client 0 bid amount 17081
+2022/11/29 16:21:23 Client 0 bid amount 17081
+2022/11/29 16:21:25 Current bid status is on going with the highest price 17081
+2022/11/29 16:21:25 Client 0 bid amount 34434
+2022/11/29 16:21:25 Client 0 bid amount 34434
+2022/11/29 16:21:27 Current bid status is on going with the highest price 34434
+2022/11/29 16:21:27 Client 0 bid amount 51790
+2022/11/29 16:21:27 Client 0 bid amount 51790
+2022/11/29 16:21:28 Current bid status is on going with the highest price 51790
+2022/11/29 16:21:28 Client 0 bid amount 69207
+2022/11/29 16:21:28 Client 0 bid amount 69207
+2022/11/29 16:21:29 Current bid status is on going with the highest price 69207
+2022/11/29 16:21:29 Client 0 bid amount 86703
+2022/11/29 16:21:29 This bid round is over(bid times more than 5)
+2022/11/29 16:21:29 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:29 Client 0 bid amount 86703
+2022/11/29 16:21:29 This bid round is over(bid times more than 5)
+2022/11/29 16:21:29 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:30 Current bid status is on going with the highest price 0
+2022/11/29 16:21:30 Client 0 bid amount 17610
+2022/11/29 16:21:30 Client 0 bid amount 17610
+2022/11/29 16:21:31 Current bid status is on going with the highest price 17610
+2022/11/29 16:21:31 Client 0 bid amount 35303
+2022/11/29 16:21:31 Client 0 bid amount 35303
+2022/11/29 16:21:33 Current bid status is on going with the highest price 35303
+2022/11/29 16:21:33 Client 0 bid amount 53430
+2022/11/29 16:21:33 Client 0 bid amount 53430
+2022/11/29 16:21:34 Current bid status is on going with the highest price 53430
+2022/11/29 16:21:34 Client 0 bid amount 71921
+2022/11/29 16:21:34 Client 0 bid amount 71921
+2022/11/29 16:21:36 Current bid status is on going with the highest price 71921
+2022/11/29 16:21:36 Client 0 bid amount 90901
+2022/11/29 16:21:36 This bid round is over(bid times more than 5)
+2022/11/29 16:21:36 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:36 Client 0 bid amount 90901
+2022/11/29 16:21:36 This bid round is over(bid times more than 5)
+2022/11/29 16:21:36 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:38 Current bid status is on going with the highest price 0
+2022/11/29 16:21:38 Client 0 bid amount 18983
+2022/11/29 16:21:38 Client 0 bid amount 18983
+2022/11/29 16:21:39 Current bid status is on going with the highest price 18983
+2022/11/29 16:21:39 Client 0 bid amount 38250
+2022/11/29 16:21:39 Client 0 bid amount 38250
+2022/11/29 16:21:40 Current bid status is on going with the highest price 38250
+2022/11/29 16:21:40 Client 0 bid amount 57559
+2022/11/29 16:21:40 Client 0 bid amount 57559
+2022/11/29 16:21:41 Current bid status is on going with the highest price 57559
+2022/11/29 16:21:41 Client 0 bid amount 77222
+2022/11/29 16:21:41 Client 0 bid amount 77222
+2022/11/29 16:21:42 Current bid status is on going with the highest price 77222
+2022/11/29 16:21:42 Client 0 bid amount 96991
+2022/11/29 16:21:42 This bid round is over(bid times more than 5)
+2022/11/29 16:21:42 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:42 Client 0 bid amount 96991
+2022/11/29 16:21:42 This bid round is over(bid times more than 5)
+2022/11/29 16:21:42 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:44 Current bid status is on going with the highest price 0
+2022/11/29 16:21:44 Client 0 bid amount 19993
+2022/11/29 16:21:44 Client 0 bid amount 19993
+2022/11/29 16:21:45 Current bid status is on going with the highest price 19993
+2022/11/29 16:21:45 Client 0 bid amount 40336
+2022/11/29 16:21:45 Client 0 bid amount 40336
+2022/11/29 16:21:46 Current bid status is on going with the highest price 40336
+2022/11/29 16:21:46 Client 0 bid amount 60990
+2022/11/29 16:21:46 Client 0 bid amount 60990
+2022/11/29 16:21:48 Current bid status is on going with the highest price 60990
+2022/11/29 16:21:48 Client 0 bid amount 81850
+2022/11/29 16:21:48 Client 0 bid amount 81850
+2022/11/29 16:21:50 Current bid status is on going with the highest price 81850
+2022/11/29 16:21:50 Client 0 bid amount 103123
+2022/11/29 16:21:50 This bid round is over(bid times more than 5)
+2022/11/29 16:21:50 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:50 Client 0 bid amount 103123
+2022/11/29 16:21:50 This bid round is over(bid times more than 5)
+2022/11/29 16:21:50 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:52 Current bid status is on going with the highest price 0
+2022/11/29 16:21:52 Client 0 bid amount 21617
+2022/11/29 16:21:52 Client 0 bid amount 21617
+2022/11/29 16:21:54 Current bid status is on going with the highest price 21617
+2022/11/29 16:21:54 Client 0 bid amount 43550
+2022/11/29 16:21:54 Client 0 bid amount 43550
+2022/11/29 16:21:56 Current bid status is on going with the highest price 43550
+2022/11/29 16:21:56 Client 0 bid amount 65671
+2022/11/29 16:21:56 Client 0 bid amount 65671
+2022/11/29 16:21:57 Current bid status is on going with the highest price 65671
+2022/11/29 16:21:57 Client 0 bid amount 88023
+2022/11/29 16:21:57 Client 0 bid amount 88023
+2022/11/29 16:21:58 Current bid status is on going with the highest price 88023
+2022/11/29 16:21:58 Client 0 bid amount 110752
+2022/11/29 16:21:58 This bid round is over(bid times more than 5)
+2022/11/29 16:21:58 Starting a new bidding round, starting amount 0
+2022/11/29 16:21:58 Client 0 bid amount 110752
+2022/11/29 16:21:58 This bid round is over(bid times more than 5)
+2022/11/29 16:21:58 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:00 Current bid status is on going with the highest price 0
+2022/11/29 16:22:00 Client 0 bid amount 23089
+2022/11/29 16:22:00 Client 0 bid amount 23089
+2022/11/29 16:22:01 Current bid status is on going with the highest price 23089
+2022/11/29 16:22:01 Client 0 bid amount 46640
+2022/11/29 16:22:01 Client 0 bid amount 46640
+2022/11/29 16:22:03 Current bid status is on going with the highest price 46640
+2022/11/29 16:22:03 Client 0 bid amount 70472
+2022/11/29 16:22:03 Client 0 bid amount 70472
+2022/11/29 16:22:05 Current bid status is on going with the highest price 70472
+2022/11/29 16:22:05 Client 0 bid amount 94798
+2022/11/29 16:22:05 Client 0 bid amount 94798
+2022/11/29 16:22:07 Current bid status is on going with the highest price 94798
+2022/11/29 16:22:07 Client 0 bid amount 119130
+2022/11/29 16:22:07 This bid round is over(bid times more than 5)
+2022/11/29 16:22:07 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:07 Client 0 bid amount 119130
+2022/11/29 16:22:07 This bid round is over(bid times more than 5)
+2022/11/29 16:22:07 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:09 Current bid status is on going with the highest price 0
+2022/11/29 16:22:09 Client 0 bid amount 24627
+2022/11/29 16:22:09 Client 0 bid amount 24627
+2022/11/29 16:22:10 Current bid status is on going with the highest price 24627
+2022/11/29 16:22:10 Client 0 bid amount 49721
+2022/11/29 16:22:10 Client 0 bid amount 49721
+2022/11/29 16:22:11 Current bid status is on going with the highest price 49721
+2022/11/29 16:22:11 Client 0 bid amount 74982
+2022/11/29 16:22:11 Client 0 bid amount 74982
+2022/11/29 16:22:13 Current bid status is on going with the highest price 74982
+2022/11/29 16:22:13 Client 0 bid amount 100627
+2022/11/29 16:22:13 Client 0 bid amount 100627
+2022/11/29 16:22:14 Current bid status is on going with the highest price 100627
+2022/11/29 16:22:14 Client 0 bid amount 126749
+2022/11/29 16:22:14 This bid round is over(bid times more than 5)
+2022/11/29 16:22:14 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:14 Client 0 bid amount 126749
+2022/11/29 16:22:14 This bid round is over(bid times more than 5)
+2022/11/29 16:22:14 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:16 Current bid status is on going with the highest price 0
+2022/11/29 16:22:16 Client 0 bid amount 26403
+2022/11/29 16:22:16 Client 0 bid amount 26403
+2022/11/29 16:22:17 Current bid status is on going with the highest price 26403
+2022/11/29 16:22:17 Client 0 bid amount 52949
+2022/11/29 16:22:17 Client 0 bid amount 52949
+2022/11/29 16:22:19 Current bid status is on going with the highest price 52949
+2022/11/29 16:22:19 Client 0 bid amount 79496
+2022/11/29 16:22:19 Client 0 bid amount 79496
+2022/11/29 16:22:21 Current bid status is on going with the highest price 79496
+2022/11/29 16:22:21 Client 0 bid amount 106488
+2022/11/29 16:22:21 Client 0 bid amount 106488
+2022/11/29 16:22:23 Current bid status is on going with the highest price 106488
+2022/11/29 16:22:23 Client 0 bid amount 133754
+2022/11/29 16:22:23 This bid round is over(bid times more than 5)
+2022/11/29 16:22:23 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:23 Client 0 bid amount 133754
+2022/11/29 16:22:23 This bid round is over(bid times more than 5)
+2022/11/29 16:22:23 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:24 Current bid status is on going with the highest price 0
+2022/11/29 16:22:24 Client 0 bid amount 27301
+2022/11/29 16:22:24 Client 0 bid amount 27301
+2022/11/29 16:22:26 Current bid status is on going with the highest price 27301
+2022/11/29 16:22:26 Client 0 bid amount 54953
+2022/11/29 16:22:26 Client 0 bid amount 54953
+2022/11/29 16:22:28 Current bid status is on going with the highest price 54953
+2022/11/29 16:22:28 Client 0 bid amount 83083
+2022/11/29 16:22:28 Client 0 bid amount 83083
+2022/11/29 16:22:29 Current bid status is on going with the highest price 83083
+2022/11/29 16:22:29 Client 0 bid amount 111237
+2022/11/29 16:22:29 Client 0 bid amount 111237
+2022/11/29 16:22:31 Current bid status is on going with the highest price 111237
+2022/11/29 16:22:31 Client 0 bid amount 139493
+2022/11/29 16:22:31 This bid round is over(bid times more than 5)
+2022/11/29 16:22:31 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:31 Client 0 bid amount 139493
+2022/11/29 16:22:31 This bid round is over(bid times more than 5)
+2022/11/29 16:22:31 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:33 Current bid status is on going with the highest price 0
+2022/11/29 16:22:33 Client 0 bid amount 28468
+2022/11/29 16:22:33 Client 0 bid amount 28468
+2022/11/29 16:22:35 Current bid status is on going with the highest price 28468
+2022/11/29 16:22:35 Client 0 bid amount 57122
+2022/11/29 16:22:35 Client 0 bid amount 57122
+2022/11/29 16:22:37 Current bid status is on going with the highest price 57122
+2022/11/29 16:22:37 Client 0 bid amount 86088
+2022/11/29 16:22:37 Client 0 bid amount 86088
+2022/11/29 16:22:39 Current bid status is on going with the highest price 86088
+2022/11/29 16:22:39 Client 0 bid amount 115394
+2022/11/29 16:22:39 Client 0 bid amount 115394
+2022/11/29 16:22:41 Current bid status is on going with the highest price 115394
+2022/11/29 16:22:41 Client 0 bid amount 144756
+2022/11/29 16:22:41 This bid round is over(bid times more than 5)
+2022/11/29 16:22:41 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:41 Client 0 bid amount 144756
+2022/11/29 16:22:41 This bid round is over(bid times more than 5)
+2022/11/29 16:22:41 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:42 Current bid status is on going with the highest price 0
+2022/11/29 16:22:42 Client 0 bid amount 29593
+2022/11/29 16:22:42 Client 0 bid amount 29593
+2022/11/29 16:22:43 Current bid status is on going with the highest price 29593
+2022/11/29 16:22:43 Client 0 bid amount 59471
+2022/11/29 16:22:43 Client 0 bid amount 59471
+2022/11/29 16:22:45 Current bid status is on going with the highest price 59471
+2022/11/29 16:22:45 Client 0 bid amount 89715
+2022/11/29 16:22:45 Client 0 bid amount 89715
+2022/11/29 16:22:46 Current bid status is on going with the highest price 89715
+2022/11/29 16:22:46 Client 0 bid amount 120350
+2022/11/29 16:22:46 Client 0 bid amount 120350
+2022/11/29 16:22:47 Current bid status is on going with the highest price 120350
+2022/11/29 16:22:47 Client 0 bid amount 151196
+2022/11/29 16:22:47 This bid round is over(bid times more than 5)
+2022/11/29 16:22:47 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:47 Client 0 bid amount 151196
+2022/11/29 16:22:47 This bid round is over(bid times more than 5)
+2022/11/29 16:22:47 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:48 Current bid status is on going with the highest price 0
+2022/11/29 16:22:48 Client 0 bid amount 31110
+2022/11/29 16:22:48 Client 0 bid amount 31110
+2022/11/29 16:22:50 Current bid status is on going with the highest price 31110
+2022/11/29 16:22:50 Client 0 bid amount 62389
+2022/11/29 16:22:50 Client 0 bid amount 62389
+2022/11/29 16:22:51 Current bid status is on going with the highest price 62389
+2022/11/29 16:22:51 Client 0 bid amount 94020
+2022/11/29 16:22:51 Client 0 bid amount 94020
+2022/11/29 16:22:52 Current bid status is on going with the highest price 94020
+2022/11/29 16:22:52 Client 0 bid amount 125652
+2022/11/29 16:22:52 Client 0 bid amount 125652
+2022/11/29 16:22:53 Current bid status is on going with the highest price 125652
+2022/11/29 16:22:53 Client 0 bid amount 157348
+2022/11/29 16:22:53 This bid round is over(bid times more than 5)
+2022/11/29 16:22:53 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:53 Client 0 bid amount 157348
+2022/11/29 16:22:53 This bid round is over(bid times more than 5)
+2022/11/29 16:22:53 Starting a new bidding round, starting amount 0
+2022/11/29 16:22:55 Current bid status is on going with the highest price 0
+2022/11/29 16:22:55 Client 0 bid amount 31935
+2022/11/29 16:22:55 Client 0 bid amount 31935
+2022/11/29 16:22:57 Current bid status is on going with the highest price 31935
+2022/11/29 16:22:57 Client 0 bid amount 63996
+2022/11/29 16:22:57 Client 0 bid amount 63996
