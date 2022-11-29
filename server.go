@@ -79,10 +79,10 @@ func launchServer() {
 
 //func bid
 func (s *server) Bid(context context.Context, bid *gRPC.BidRequest) (*gRPC.Ack, error){
-	log.Printf("Client %v bid amount %d", bid.clientId, bid.amount)
+	log.Printf("Client %v bid amount %d", bid.ClientId, bid.Amount)
 
-    if int(bid.Amount) > s.highestPrice {
-        s.highestPrice = int(bid.Amount)
+    if int(bid.Amount) > int(s.highestPrice) {
+        s.highestPrice = int32(bid.Amount)
         //change the bid status
 		s.bidTimes ++
 		if s.bidTimes >= 5 {
@@ -98,7 +98,7 @@ func (s *server) Bid(context context.Context, bid *gRPC.BidRequest) (*gRPC.Ack, 
 			log.Printf("Starting a new bidding round, starting amount %d",s.highestPrice)
 		}
         return &gRPC.Ack{Ack: gRPC.Acks_ACK_SUCCESS}, nil
-    } else if int(bid.Amount) < s.highestPrice{
+    } else if int(bid.Amount) < int(s.highestPrice) {
         return &gRPC.Ack{Ack: gRPC.Acks_ACK_FAIL}, nil
     } else {
         return &gRPC.Ack{Ack: gRPC.Acks_ACK_EXCEPTION}, nil
@@ -109,7 +109,7 @@ func (s *server) Bid(context context.Context, bid *gRPC.BidRequest) (*gRPC.Ack, 
 func (s *server) Result(context context.Context, empty *gRPC.Empty) (*gRPC.Outcome, error) {
 	log.Printf("Current bid status is %s with the highest price %d",string(s.status),int32(s.highestPrice))
 	println("Current bid status is %s with the highest price %d",string(s.status),int32(s.highestPrice))
-	return &gRPC.Outcome{Amount: int32(s.highestPrice), Over: string(s.status)}, nil
+	return &gRPC.Outcome{BidState: string(s.status), HighestPrice: int32(s.highestPrice)}, nil
 }
 
 // sets the logger to use a log.txt file instead of the console
